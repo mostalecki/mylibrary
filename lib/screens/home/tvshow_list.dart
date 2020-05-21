@@ -2,6 +2,7 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
 import 'package:flutter/material.dart';
 import 'package:mylibrary/models/movie.dart';
+import 'package:mylibrary/screens/home/tvshow_card.dart';
 import 'package:mylibrary/services/auth.dart';
 
 import 'movie_card.dart';
@@ -57,7 +58,7 @@ class _TvShowListState extends State<TvShowList> {
                   itemBuilder: (BuildContext context, DataSnapshot snapshot,
                       Animation<double> animation, int index){
                     Movie _movie = Movie.fromSnapshot(snapshot);
-                    return MovieCard(snackKey: widget.snackKey ,movie: _movie);
+                    return TvShowCard(snackKey: widget.snackKey ,movie: _movie);
                   }
               ),
             )

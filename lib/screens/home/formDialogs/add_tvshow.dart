@@ -116,6 +116,7 @@ class _AddTvShowState extends State<AddTvShow> {
           child: Text('Submit'),
           onPressed: () async {
             if (_formKey.currentState.validate()){
+              _title = titleController.text;
               Movie movie = Movie(title: _title, year:_year, posterUrl: _posterUrl, finished: _finished);
               if (!widget.editMode) {
                 await _db.addMovie(movie, series: true);

@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:mylibrary/models/movie.dart';
 
 class MovieApiService{
   static String _apiKey = '';
